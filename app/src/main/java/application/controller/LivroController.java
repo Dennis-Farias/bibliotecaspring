@@ -18,4 +18,9 @@ public class LivroController {
         model.addAttribute("livros", livroRepo.findAll());
         return "WEB-INF/list.jsp";
     }
+
+    @RequestMapping("/insert")
+    public String insert() {
+        return "WEB-INF/insert.jsp";
+    }
 }
