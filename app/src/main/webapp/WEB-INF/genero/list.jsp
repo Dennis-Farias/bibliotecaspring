@@ -4,28 +4,26 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <title>Livros</title>
+        <title>Generos</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <h1>Livros</h1>
-            <a href="/livro/insert" class="btn btn-primary">Novo Livro</a>
+            <h1>Generos</h1>
+            <a href="/genero/insert" class="btn btn-primary">Novo Gênero</a>
             <table class="table">
                 <tr>
                     <th>Id</th>
-                    <th>Título</th>
-                    <th>ISBN</th>
+                    <th>Nome</th>
                     <th>&nbsp;</th>
                 </tr>
-                <c:forEach var="item" items="${livros}">
+                <c:forEach var="item" items="${generos}">
                     <tr>
                         <td>${item.id}</td>
-                        <td>${item.titulo}</td>
-                        <td>${item.isbn}</td>
+                        <td>${item.nome}</td>
                         <td>
-                            <a href="/livro/update?id=${item.id}" class="btn btn-warning">Editar</a>
-                            <a href="/livro/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            <a href="/genero/update?id=${item.id}" class="btn btn-warning">Editar</a>
+                            <a href="/genero/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 </c:forEach>
